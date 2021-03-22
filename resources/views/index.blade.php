@@ -29,7 +29,101 @@
 
 <header id="header-wrap">
 
-<div class="top-bar">
+<nav class="navbar navbar-expand-lg bg-white scrolling-navbar ">
+<div class="container">
+
+<div class="navbar-header">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="lni-menu"></span>
+        <span class="lni-menu"></span>
+        <span class="lni-menu"></span>
+        <span class="lni-menu"></span>
+        <span class="lni-menu"></span>
+    </button>
+<!-- logo -->
+<a href="index" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+</div>
+
+<!-- home -->
+<div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav mr-auto w-100 justify-content-center">
+    <li class="nav-item dropdown active">
+    <a class="nav-link dropdown-toggle" href="index" aria-haspopup="true" aria-expanded="false">
+    Home
+    </a>
+    </li>
+<!-- Categories -->
+    <li class="nav-item">
+    <a class="nav-link" href="category">
+    Categories
+    </a>
+    </li>
+    <li class="nav-item dropdown">
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="about" aria-haspopup="true" aria-expanded="false">
+    About
+    </a>
+    </li>
+<!-- Contact -->
+    <li class="nav-item">
+    <a class="nav-link" href="contact">
+    Contact
+    </a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="contact">
+    Login
+    </a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="contact">
+    Register
+    </a>
+    </li>
+    </ul>
+<!-- Post an Ad -->
+    <div class="post-btn">
+    <a class="btn btn-common" href="post-ads"><i class="lni-pencil-alt"></i> Post an Ad</a>
+    </div>
+    </div>
+    </div>
+
+    <!-- <div class="post-btn">
+    <a class="btn btn-common" href="post-ads"><i class="lni-pencil-alt"></i>Login</a>
+    </div>
+    </div>
+    </div>
+
+    <div class="post-btn">
+    <a class="btn btn-common" href="post-ads"><i class="lni-pencil-alt"></i>Register</a>
+    </div>
+    </div>
+    </div> -->
+    
+<ul class="mobile-menu">
+<li>
+<a class="active" href="#">Home</a>
+</li>
+<li>
+<a href="#">About</a>
+</li>
+<li>
+<a href="contact">Contact</a>
+</li>
+<li>
+<a href="Login">Login</a>
+</li>
+<li>
+<a href="Register">Register</a>
+</li>
+<li>
+<a href="PostanAd">Post an Ad</a>
+</li>
+</ul>
+</nav>
+
+<!-- <div class="top-bar">
     <div class="container">
         <div class="row">
 
@@ -41,73 +135,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
-<nav class="navbar navbar-expand-lg bg-white fixed-top scrolling-navbar">
-<div class="container">
-
-<div class="navbar-header">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    <span class="lni-menu"></span>
-    <span class="lni-menu"></span>
-    <span class="lni-menu"></span>
-</button>
-<a href="index" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
-</div>
-<div class="collapse navbar-collapse" id="main-navbar">
-<ul class="navbar-nav mr-auto w-100 justify-content-center">
-<li class="nav-item dropdown active">
-<a class="nav-link dropdown-toggle" href="index" aria-haspopup="true" aria-expanded="false">
-Home
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="category">
-Categories
-</a>
-</li>
- <li class="nav-item dropdown">
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="about" aria-haspopup="true" aria-expanded="false">
-About
-</a>
-<div class="dropdown-menu">
-<a class="dropdown-item" href="faq">FAQ</a>
-</div>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact">
-Contact
-</a>
-</li>
-</ul>
-<div class="post-btn">
-<a class="btn btn-common" href="post-ads"><i class="lni-pencil-alt"></i> Post an Ad</a>
-</div>
-</div>
-</div>
-
-<ul class="mobile-menu">
-<li>
-<a class="active" href="#">
-Home
-</a>
-</li>
-<li>
-<li>
-<li>
-<a href="#">About</a>
-<ul class="dropdown">
-<li><a href="faq">FAQ</a></li>
-</ul>
-</li>
-<li>
-<a href="contact">Contact Us</a>
-</li>
-</ul>
-</nav>
 
 
 <div id="hero-area">
