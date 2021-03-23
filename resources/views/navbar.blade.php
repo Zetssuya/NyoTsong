@@ -78,7 +78,7 @@
     </a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="contact">
+    <a class="nav-link" href="newregister">
     Register
     </a>
     </li>
@@ -103,10 +103,10 @@
 <a href="contact">Contact</a>
 </li>
 <li>
-<a href="Login">Login</a>
+<a href="newlogin">Login</a>
 </li>
 <li>
-<a href="Register">Register</a>
+<a href="newregister">Register</a>
 </li>
 <li>
 <a href="PostanAd">Post an Ad</a>
