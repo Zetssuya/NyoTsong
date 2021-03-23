@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::view('index', 'index');
 Route::view('newlogin', 'newlogin');
 Route::view('newregister', 'newregister');
+Route::view('newforgot-password', 'newforgot-password');
 
 Auth::routes();
 

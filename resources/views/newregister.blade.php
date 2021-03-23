@@ -14,9 +14,6 @@
 </head>
 <body>
 
-
-
-
 <div class="page-header" style="background: url(assets/img/banner1.jpg);">
 <div class="container">
 <div class="row">
