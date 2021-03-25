@@ -12,12 +12,6 @@
 
     
 <body>
-
-<header id="header-wrap">
-
-
-
-
 <div id="hero-area">
 <div class="overlay"></div>
 <div class="container">

@@ -21,6 +21,13 @@ Route::view('newlogin', 'newlogin');
 Route::view('newregister', 'newregister');
 Route::view('newforgot-password', 'newforgot-password');
 
+Route::view('post-ads', 'post-ads');
+Route::get('post-ads', 'CategoryController@index');
+Route::get('post-ads', 'DzoController@index');
+
+
+Route::view('account-profile-setting', 'account-profile-setting');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
