@@ -10,9 +10,7 @@ class DzoController extends Controller
     //
     function index()
     {
-        // $data=Category::all();
         $data=DB::table('dzongkhags')->get();
-        // return view('test', ['data'=>$data]);
         return view('post-ads', ['data'=>$data]);
         
     }

@@ -30,7 +30,7 @@
 
 
 
-<nav class="navbar navbar-expand-lg bg-white  scrolling-navbar ">
+<nav class="navbar navbar-expand-lg bg-white fixed-top scrolling-navbar ">
 <div class="container">
 
 <div class="navbar-header">
@@ -47,7 +47,7 @@
 </div>
 
 
-<div class="collapse navbar-collapse" id="main-navbar">
+<!-- <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav mr-auto w-100 justify-content-center">
     <li class="nav-item dropdown active">
     <a class="nav-link dropdown-toggle" href="index" aria-haspopup="true" aria-expanded="false">
@@ -88,9 +88,99 @@
     <a class="btn btn-common" href="post-ads"><i class="lni-pencil-alt"></i> Post an Ad</a>
     </div>
     </div>
-    </div>
+    </div> -->
 
-   
+    <ul class="navbar-nav ml-auto">
+    <!-- Authentication Links -->
+    @guest
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="index" aria-haspopup="true" aria-expanded="false">
+    Home
+    </a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="category">
+    Categories
+    </a>
+    </li>
+    <li class="nav-item dropdown">
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="about" aria-haspopup="true" aria-expanded="false">
+    About
+    </a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="contact">
+    Contact
+    </a>
+    </li>
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="newlogin">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+                            
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="newregister">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            <li class="nav-item dropdown active">
+    <a class="nav-link dropdown-toggle" href="post-ads" aria-haspopup="true" aria-expanded="false">
+    Post an Ad
+    </a>
+    </li>
+                            
+                        @else
+                        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="index" aria-haspopup="true" aria-expanded="false">
+    Home
+    </a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="category">
+    Categories
+    </a>
+    </li>
+    <li class="nav-item dropdown">
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="about" aria-haspopup="true" aria-expanded="false">
+    About
+    </a>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="contact">
+    Contact
+    </a>
+    </li>
+    <li class="nav-item dropdown active">
+    <a class="nav-link dropdown-toggle" href="post-ads" aria-haspopup="true" aria-expanded="false">
+    Post an Ad
+    </a>
+    </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul> 
     
 <ul class="mobile-menu">
 <li>

@@ -19,6 +19,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
     public const LOGIN = '/newlogin';
+    public const POSTADS = '/post-ads';
+
 
 
     /**

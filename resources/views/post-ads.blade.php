@@ -90,13 +90,20 @@
 <div class="dashboard-box">
 <h2 class="dashbord-title">Ads Detail</h2>
 </div>
-
-<form action="submit" method="POST">
+@if($message = Session::get('success'))
+    <div class="alert alert-success alert-block">
+        <strong>{{ $message }}</strong>
+    </div>
+    <br>
+@endif
+<form action="{{url('save')}}" method="POST" accept-charset="utf-8">
+@csrf
 
     <div class="dashboard-wrapper">
     <div class="form-group mb-3">
-    <label class="control-label">Product Detail</label>
-    <input class="form-control input-md" name="Title" placeholder="Enter product name" type="text">
+    <label class="control-label">Product Name</label>
+    <input class="form-control input-md" name="name" placeholder="Enter product name" autofocus type="text">
+    <span class="text-danger">{{$errors->first('name')}}</span>
     </div>
     <div class="form-group mb-3 tg-inputwithicon">
     <label class="control-label">Categories</label>
@@ -115,21 +122,20 @@
     <div class="form-group mb-3">
     <label class="control-label">Product Price</label>
     <input class="form-control input-md" name="price" placeholder="Enter product price" type="text">
+    <span class="text-danger">{{$errors->first('price')}}</span>
     <div class="tg-checkbox mt-3">
     </div>
     </div>
 
     <div class="form-group-lg md-3">
     <label class="control-label">Product Detail</label>
-    <input class="form-control input-md" name="product-detail" placeholder="Enter product Details" type="text">
+    <textarea class="form-control input-md" name="detail" placeholder="Enter product Details" type="text"></textarea>
+    <span class="text-danger">{{$errors->first('detail')}}</span>
     <div class="tg-checkbox mt-3">
     </div>
 
     </div>
     <div class="form-group md-3">
-    <section id="editor">
-    <div id="summernote">
-    </div>
     </section>
     </div>
     <label class="tg-fileuploadlabel" for="tg-photogallery">
@@ -153,18 +159,12 @@
 
     </div>
     </div>
-    <div class="form-group mb-3 tg-inputwithicon">
-    <label class="control-label">Select your Product Location</label>
-    <div class="tg-select form-control">
-    <select>
-        @foreach($data as $row)
-            <option value="{{$row->id}}">{{$row->name}}</option>
-        @endforeach
-    <!-- <option value="none">Select Dzongkhag</option>
-    <option value="none">Paro</option>
-    <option value="none">Bumthang</option>
-    <option value="none">Chukha</option> -->
-    </select>
+   
+    <div class="form-group-lg md-3">
+    <label class="control-label">Enter product address</label>
+    <input class="form-control input-md" name="address" placeholder="e.g. Babesa, Thimphu" type="text"></input>
+    <span class="text-danger">{{$errors->first('address')}}</span>
+    <div class="tg-checkbox mt-3">
     </div>
     </div>
     </div>
@@ -176,7 +176,10 @@
     <label class="custom-control-label" for="tg-agreetermsandrules">I agree to all NyoTsong <a href="javascript:void(0);">Privacy Terms &amp; Conditions</a></label>
     </div>
     </div>
+    <div class="form-group">
     <button class="btn btn-common" type="submit">Post Ad</button>
+    </div>
+    
     </div>
     </div>
     </div>
